@@ -47,3 +47,5 @@ Por último, como o processo fica sendo tramitado para pagamento e voltando para
 Por isso foi criado o “Objetivo 4: Checar se todos os pagamentos aos fornecedores já foram feitos para poder arquivar o processo”.
 
 Essa funcionalidade gera a planilha 'Planilha de Controle de Pagamentos.xlsx' com a adição da coluna Data_Pag com as datas dos pagamentos de cada um dos fornecedores, caso esse pagamento tenha sido feito e “Não” caso ainda não tenha.
+
+O processo usado para testar o código está aqui: https://drive.google.com/file/d/1pQB3RbkuaEy-0w55V07zoH0Z4byEODfT/view?usp=sharing
