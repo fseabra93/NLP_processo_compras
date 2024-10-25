@@ -26,11 +26,12 @@ Situação (2)
 
 Nos processos de compras, é necessário identificar quais foram os itens que não tiveram sucesso na licitação (desertos ou fracassados) para que se possa iniciar o quanto antes um novo processo de aquisição de modo que que dê tempo desse segundo processo ser concluído ainda no mesmo exercício financeiro. Além disso, é necessário checar se todos os produtos que tiveram sucesso na licitação estão incluídos em alguma Nota de Empenho, porque se não tiver, o fornecedor não receberá o e-mail e não entregará o produto.
 
-
 Para essa demanda, foi estabelecido o “Objetivo 2: Listar os produtos fracassados e checar se todos os produtos homologados pela DG constam nas notas de empenho anexadas ao processo”.
 
 Para isso, o código gera duas listas, a lista “produtos_homologados” e a lista “produtos_homologados_nao_presentes_nas_NE”. 
 A lista “produtos_homologados_nao_presentes_nas_NE”, em um processo onde tudo está correto é para estar vazia, mas às vezes não está, como nesse processo específico. Essa verificação é uma coisa muito trabalhosa para detectar sem automação e muito importante porque a COFIN precisa ser avisada para verificar onde está o erro o quanto antes.
+
+Após a análise, o arquivo "mensagem_itens_homologados.txt" é gerado com os números dos itens que foram homologados mas não estão em nenhuma Nota de Empenho, se existir. 
 
 Situação (3)
 
@@ -38,14 +39,14 @@ Depois que as Notas de Empenho são enviadas para as empresas fornecedoras é ne
 
 Para essa demanda foi estabelecido o “Objetivo 3: Criar uma Planilha para acompanhamento das entregas dos produtos pelos fornecedores”.
 
-A criação da planilha foi colocada dentro de um if-else porque só faz sentido criar essa planilha depois do envio das notas de empenho, e o código pode ser usado para outras finalidades antes da necessidade da criação dessa planilha.
-
 Situação (4)
 
-Por último, como o processo fica sendo tramitado para pagamento e voltando para a SAMS a cada entrega de cada fornecedor, e dezenas de páginas são anexadas ao processo a cada ida e vinda dessa, é muito fácil perder o controle se todos os pagamentos já foram feitos. Se já foram, o processo pode ser arquivado, se não foram, não pode ainda.
+Por último, como o processo fica sendo tramitado para pagamento e voltando para a SAMS a cada entrega de cada fornecedor, e muitas páginas são anexadas ao processo a cada ida e vinda dessa, é muito fácil perder o controle se todos os pagamentos já foram feitos. Se já foram, o processo pode ser arquivado, se não foram, não pode ainda.
 
 Por isso foi criado o “Objetivo 4: Checar se todos os pagamentos aos fornecedores já foram feitos para poder arquivar o processo”.
 
-Essa funcionalidade gera a planilha 'Planilha de Controle de Pagamentos.xlsx' com a adição da coluna Data_Pag com as datas dos pagamentos de cada um dos fornecedores, caso esse pagamento tenha sido feito e “Não” caso ainda não tenha.
+Essa funcionalidade gera a planilha 'Planilha de Controle de Pagamentos.xlsx' com a adição da coluna Data_Pag com as datas dos pagamentos de cada um dos fornecedores.
 
-O processo usado para testar o código está aqui: https://drive.google.com/file/d/1pQB3RbkuaEy-0w55V07zoH0Z4byEODfT/view?usp=sharing
+Os processos usados para testar o código estão em:
+- https://drive.google.com/file/d/1pQB3RbkuaEy-0w55V07zoH0Z4byEODfT/view?usp=sharing
+- https://drive.google.com/file/d/1atPY7LGyyanH9Gv4czpgF9uBsSmwPIIJ/view?usp=sharing
